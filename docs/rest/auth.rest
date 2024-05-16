@@ -9,16 +9,9 @@ Content-Type: application/json
     "password": "654321"
 }
 
-
-
-POST http://127.0.0.1:3000/auth/register
-Content-Type: application/json
-
-{
-    "name": "prueba",
-    "email":"casa@gmail.com",
-    "password": "123456"
-}
+####
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTU4NzM0ODksImV4cCI6MTcxNTg3NDA5NH0.mqZPC_8bEigkSW8535DlUdRBBdH_Tb9oVg8aoPnzwCU
 
 
 
