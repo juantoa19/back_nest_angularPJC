@@ -17,6 +17,6 @@ export class AuthController {
 
     @Post('login')
     login(@Body() credenciales: LoginAuthDto) {
-
+        return this.authService.login(credenciales)
     }
 }
