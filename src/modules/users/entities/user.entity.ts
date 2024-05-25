@@ -1,22 +1,26 @@
-import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
+import { Persona } from "../../persona/entities/persona.entity";
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from "typeorm";
 
 
 @Entity()
-export class user {
+export class User {
     @PrimaryGeneratedColumn()
-    id:number;
+    id: number;
 
     @Column()
-    name:string;
+    name: string;
 
     @Column()
-    mail:string;
+    mail: string;
 
     @Column()
-    password:string;
+    password: string;
 
     @Column()
-    telefono:string;
+    telefono: string;
+
+    @OneToOne(() => Persona, persona => persona.user, { cascade: true })
+    persona: Persona;
 
 }
 

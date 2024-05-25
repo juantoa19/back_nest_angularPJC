@@ -3,9 +3,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Categoria {
     @PrimaryGeneratedColumn()
-    id:number;
+    id: number;
     @Column()
-    nombre:string;
-    @Column()
-    detalle:string;
+    nombreCategoria: string;
+
 }
