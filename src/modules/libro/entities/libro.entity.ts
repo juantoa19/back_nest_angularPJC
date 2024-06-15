@@ -6,16 +6,16 @@ export class Libro {
     @PrimaryGeneratedColumn()
     id:number;
 
-    @Column()
+    @Column({type:'varchar', length:250})
     titulo:string;
 
-    @Column()
+    @Column({type:'varchar', length:250})
     autor:string;
 
-    @Column()
+    @Column({type:'varchar', length:250})
     sinopsis:string;
     
-    @Column()
+    @Column({type:'varchar', default:true})
     libroFav:Boolean;
 
     @ManyToOne(()=> Categoria, (cat) => cat.libro) 
