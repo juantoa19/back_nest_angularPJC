@@ -12,10 +12,10 @@ export class Libro {
     @Column({type:'varchar', length:250})
     autor:string;
 
-    @Column({type:'varchar', length:250})
+    @Column({type:'text', nullable:true})
     sinopsis:string;
     
-    @Column({type:'varchar', default:true})
+    @Column({type:'boolean', default:true})
     libroFav:Boolean;
 
     @ManyToOne(()=> Categoria, (cat) => cat.libro) 
