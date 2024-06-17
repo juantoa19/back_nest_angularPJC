@@ -1,0 +1,18 @@
+### Listar libros 
+GET http://localhost:3000/libro
+
+### Crear libro
+POST http://localhost:3000/libro
+Content-Type: application/json
+
+{
+    "titulo": "Ragnarok",
+    "autor": "Stevens",
+    "sinopsis":"Siempre si",
+    "librofav": "Yo robot",
+    "categoria_id":1
+
+}
+
+### Busqueda por nombre
+GET http://localhost:3000/libro/back?sort=asc

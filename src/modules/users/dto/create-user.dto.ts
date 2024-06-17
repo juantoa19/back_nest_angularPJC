@@ -16,13 +16,8 @@ export class CreateUserDto {
 
     @ApiProperty({description:'Contraseña de usuario'})
     @MinLength(6,{message:'la contraseña debe tener como minimo 6 caracteres'})
+    @IsNotEmpty({ message: 'La contraseña no debe estar vacía' })
     @IsString({message:'La contraseña debe ser una cadena'})
     password:string;
-
-    @ApiProperty({description:'Telefono de usuario'})
-    @MinLength(11,{message:'El telefono debe tener como minimo 11 numeros '})
-    @IsNotEmpty({message:'El telefono no debe estar vacio'})
-    telefono: string;
-
 
 }
